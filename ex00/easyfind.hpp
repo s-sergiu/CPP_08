@@ -7,7 +7,7 @@
 #include <iostream>
 
 template<typename T>
-T easyfind (T &arg1, int arg2);
+typename T::iterator easyfind (T &arg1, int arg2);
 
 #include "easyfind.tpp"
 
