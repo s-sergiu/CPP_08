@@ -1,7 +1,8 @@
 
 #include "easyfind.hpp"
 #include <vector>
-#include <set>
+#include <list>
+#include <deque>
 
 int main(void) {
 	
@@ -13,8 +14,8 @@ int main(void) {
 	vec.push_back(69);
 	vec.push_back(30);
 	try {
-		it = easyfind(vec, 69);
-		std::cout<<vec.end() - it<<std::endl;
+		it = easyfind(vec, 340);
+		std::cout<<it - vec.begin()<<std::endl;
 	} catch (std::exception &e) {
 		std::cerr<<"Error: "<<e.what()<<std::endl;
 	}
