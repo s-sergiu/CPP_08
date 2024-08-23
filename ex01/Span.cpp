@@ -4,8 +4,8 @@
 Span::Span(void) {
 }
 
-Span::Span(unsigned int &number) {
-	(void)number;
+Span::Span(unsigned int number) {
+	this->N = number;
 }
 
 Span::Span(const Span &src) {
@@ -21,9 +21,14 @@ Span::~Span(void) {
 
 }
 
-void Span::addNumber(int &arg) const {
-	(void)arg;
-	std::cout<<"addNumber"<<std::endl;
+void Span::addNumber(int arg) {
+	if (this->collection.size() == N) {
+		std::cout<<"size: "<<collection.size()<<std::endl;
+		throw std::out_of_range("full");
+	} else {
+		this->collection.push_back(arg);
+		std::cout<<"Added "<<arg<<" to the collection!"<<std::endl;
+	}
 }
 
 int Span::longestSpan(void) const {
