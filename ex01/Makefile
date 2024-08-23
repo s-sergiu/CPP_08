@@ -3,8 +3,11 @@ CC = c++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
 SRC = main.cpp \
+	  Span.cpp \
+	  Span.hpp
 
 OBJ = main.o \
+	  Span.o
 
 all:$(NAME)
 
