@@ -54,3 +54,8 @@ int Span::shortestSpan(void) {
 
 	return ret;
 }
+
+void Span::addNumbersByRange(std::vector<int>::iterator start, 
+					   std::vector<int>::iterator end) {
+	this->collection.insert(collection.end(), start, end);
+}
