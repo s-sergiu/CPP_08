@@ -44,12 +44,13 @@ int Span::longestSpan(void) {
 
 int Span::shortestSpan(void) {
 	std::vector<int>::iterator itMin;
-	int ret;
+	int ret;	
 
-	ret = 0;
 	if (collection.size() < 2)
 		throw std::out_of_range("size");
+	std::sort(collection.begin(), collection.end());
 	itMin = std::min_element(collection.begin(), collection.end());
+	ret = collection.at(1) - *itMin;
 
 	return ret;
 }
