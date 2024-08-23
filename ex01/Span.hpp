@@ -3,6 +3,7 @@
 #define SPAN_HPP
 
 #include <iostream> 
+#include <algorithm> 
 #include <vector> 
 
 class Span {
@@ -16,8 +17,8 @@ class Span {
 		Span operator = (const Span &);
 		~Span(void);
 		void addNumber(int);
-		int longestSpan(void) const;
-		int shortestSpan(void) const;
+		int longestSpan(void);
+		int shortestSpan(void);
 };
 
 #endif
