@@ -5,10 +5,6 @@ int main(void) {
 	Span obj(10);
 
 	try {
-		obj.addNumber(4);
-		obj.addNumber(4);
-		obj.addNumber(2);
-		obj.addNumber(3);
 		obj.addNumber(23);
 		obj.addNumber(103);
 		obj.addNumber(42);
