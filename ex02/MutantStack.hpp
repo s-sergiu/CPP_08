@@ -15,6 +15,4 @@ class MutantStack : public Container {
 		const_iterator c_end(void) { return this->c.c_end(); };
 };
 
-//#include "MutantStack.tpp"
-
 #endif
