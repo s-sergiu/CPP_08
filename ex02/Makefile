@@ -2,16 +2,13 @@ NAME = main
 CC = c++
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
-HEADERS = MutantStack.hpp \
-		  MutantStack.tpp
-
 SRC = main.cpp \
 
 OBJ = main.o \
 
 all:$(NAME)
 
-$(NAME): $(OBJ) $(HEADERS)
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $@
 
 %.o: %.cpp
