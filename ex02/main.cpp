@@ -1,8 +1,8 @@
 
 #include "MutantStack.hpp"
+#include <iostream>
 
 int main(void) {
-{
 	MutantStack<int> mstack;
 
 	mstack.push(5);
@@ -23,6 +23,8 @@ int main(void) {
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
 
+	(void)it;
+	(void)ite;
 	++it;
 	--it;
 
