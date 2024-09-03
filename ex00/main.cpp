@@ -13,8 +13,11 @@ int main(void) {
 	vec.push_back(20);
 	vec.push_back(69);
 	vec.push_back(30);
+	vec.push_back(20);
+	vec.push_back(23);
+	vec.push_back(9);
 	try {
-		it = easyfind(vec, 340);
+		it = easyfind(vec, 20);
 		std::cout<<it - vec.begin()<<std::endl;
 	} catch (std::exception &e) {
 		std::cerr<<"Error: "<<e.what()<<std::endl;
