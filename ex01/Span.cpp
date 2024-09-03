@@ -9,11 +9,15 @@ Span::Span(unsigned int number) {
 }
 
 Span::Span(const Span &src) {
+	this->collection = src.collection;
 	this->N = src.N;
 }
 
 Span Span::operator = (const Span &src) {
-	this->N = src.N;
+	if (this != &src) {
+		this->collection = src.collection;
+		this->N = src.N;
+	}
 	return *this;
 }
 
