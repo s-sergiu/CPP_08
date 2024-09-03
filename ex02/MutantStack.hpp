@@ -7,6 +7,10 @@
 template<class T, class Container = std::stack<T> >
 class MutantStack : public Container { 
 	public:
+		MutantStack(void) {};
+		MutantStack(const MutantStack &src) {};
+		MutantStack operator = (const MutantStack &src) { return *this; };
+		~MutantStack(void) {};
 		typedef typename Container::container_type::iterator iterator;
 		typedef typename Container::container_type::const_iterator const_iterator;
 		iterator begin(void) { return this->c.begin(); };
